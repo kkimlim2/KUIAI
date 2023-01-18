@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>691</width>
+    <height>673</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btn_loadImage">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>320</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>업로드</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="InputStyle">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>50</y>
+      <width>451</width>
+      <height>531</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_predict">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>380</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>예측</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>140</y>
+      <width>141</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>입력 정보</string>
+    </property>
+    <widget class="QComboBox" name="set_gender">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>121</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>성별</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>남성</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>여성</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="set_use">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>121</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>이용자 유형</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>제조자</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>소비자</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="set_size">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>121</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>체형</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>어쩌구</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>저쩌구</string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>691</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <action name="actionsupplier">
+   <property name="text">
+    <string>supplier</string>
+   </property>
+  </action>
+  <action name="actioncustomer">
+   <property name="text">
+    <string>customer</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>제조자</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>소비자</string>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="text">
+    <string>남성</string>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="text">
+    <string>여성</string>
+   </property>
+  </action>
+  <action name="action_7">
+   <property name="text">
+    <string>어쩌구</string>
+   </property>
+  </action>
+  <action name="action_8">
+   <property name="text">
+    <string>어쩌구2</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
