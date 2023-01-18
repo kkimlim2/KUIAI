@@ -5,11 +5,19 @@ from PyQt5 import uic
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QPixmap
 from prediction import *
+import argparse    # 1. argparse를 import한다.
+
+parser = argparse.ArgumentParser(description='이 프로그램의 설명(그 외 기타등등 아무거나)')    # 2. parser를 만든다.
+parser.add_argument('--model', required=False, default = 'KUIAI/model_class23.pt')
+parser.add_argument('--device', required=False, default='cpu')
+parser.add_argument('--info', required=False, default = 'KUIAI/inf_info.csv')
+args = parser.parse_args()
+
 
 main_class = uic.loadUiType("KUIAI/main.ui")[0]
 second_class = uic.loadUiType("KUIAI/second.ui")[0]
-model_path = 'KUIAI/model_class23.pt'
-inf_path = 'KUIAI/inf_info.csv'
+model_path = args.model
+inf_path = args.info
 file_path = 'KUIAI/output.json'
 
 class MainClass(QMainWindow, main_class) :
@@ -63,7 +71,7 @@ class MainClass(QMainWindow, main_class) :
         if self.mode == None:
             QMessageBox.information(self,'Warning','모드를 선택해주세요')
         else:
-            self.style = predict_style(self.inputImageName, model_path, 'cpu')
+            self.style = predict_style(self.inputImageName, model_path, args.device)
             QMessageBox.information(self,'Information',f'{self.style}로 예측되었습니다. 해당 스타일의 인플루언서를 추천드리겠습니다.')
             if (self.gender == None) or (self.size == None): 
                 QMessageBox.information(self,'Warning','성별을 선택해주세요')
