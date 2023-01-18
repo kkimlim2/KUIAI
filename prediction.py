@@ -45,11 +45,11 @@ class_names = ['기타',
  '히피',
  '힙합']
 
-
+#사진 기반 스타일 예측
 def predict_style(image_path, MODEL_PATH, device='cpu'):
     """
     
-    image_path: image_path image (어떤형식으로 들어오는지 모르겠다...)
+    image_path: image_path 
     MODEL_PATH: model 경로
     device: cpu
     class_names: 스타일 종류
@@ -70,6 +70,7 @@ def predict_style(image_path, MODEL_PATH, device='cpu'):
     print(pred_style)
     return pred_style
 
+#스타일 기반 인플루언서 추천(제조자)
 def recomm_inf_sup(CSV_PATH, gender, size, style):
     """
     
@@ -97,6 +98,7 @@ def recomm_inf_sup(CSV_PATH, gender, size, style):
 
     return recomm_inf_ids, recomm_inf_imgs
 
+#스타일 기반 인플루언서 추천(소비자)
 def recomm_inf_cust(CSV_PATH, gender, size, style):
     """
     
